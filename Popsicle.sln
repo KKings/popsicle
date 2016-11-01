@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{539B2C0D-192D-482D-90D3-D977D2C2480B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Popsicle", "src\Foundation\code\Popsicle.csproj", "{5A5F2C1F-AF27-4A92-83AA-C24853A0B1EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Popsicle.Tests", "src\Foundation\tests\Popsicle.Tests\Popsicle.Tests.csproj", "{3E94CDFF-0E18-42D6-A4A5-479C17E2C970}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A5F2C1F-AF27-4A92-83AA-C24853A0B1EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A5F2C1F-AF27-4A92-83AA-C24853A0B1EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A5F2C1F-AF27-4A92-83AA-C24853A0B1EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A5F2C1F-AF27-4A92-83AA-C24853A0B1EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E94CDFF-0E18-42D6-A4A5-479C17E2C970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E94CDFF-0E18-42D6-A4A5-479C17E2C970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E94CDFF-0E18-42D6-A4A5-479C17E2C970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E94CDFF-0E18-42D6-A4A5-479C17E2C970}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5A5F2C1F-AF27-4A92-83AA-C24853A0B1EF} = {539B2C0D-192D-482D-90D3-D977D2C2480B}
+		{3E94CDFF-0E18-42D6-A4A5-479C17E2C970} = {539B2C0D-192D-482D-90D3-D977D2C2480B}
+	EndGlobalSection
+EndGlobal
