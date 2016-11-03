@@ -99,8 +99,8 @@ CopiedFiles_*.txt
 DeployedFiles_*.txt
 
 #nodejs and client resources
-/src/client/node_modules/
-/src/client/bower_components/
+/node_modules/
+/bower_components/
 _res/
 tools/nodejs/
 Code Generation Templates/*.tt
