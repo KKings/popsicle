@@ -1,8 +1,6 @@
-﻿
-namespace KKings.Foundation.Popsicle.Events
+﻿namespace KKings.Foundation.Popsicle.Events
 {
     using System;
-    using Sitecore.Data;
 
     public class GoalTrackingEvent : ITrackingEvent
     {

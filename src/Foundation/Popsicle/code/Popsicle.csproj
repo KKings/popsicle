@@ -64,8 +64,16 @@
       <HintPath>..\..\..\..\packages\Sitecore.Analytics.NoReferences.8.2.160729\lib\NET452\Sitecore.Analytics.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Sitecore.Analytics.DataAccess, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Analytics.DataAccess.NoReferences.8.2.160729\lib\NET452\Sitecore.Analytics.DataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Sitecore.Analytics.Model, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Analytics.Model.NoReferences.8.2.160729\lib\NET452\Sitecore.Analytics.Model.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.MongoDB, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.Analytics.MongoDB.NoReferences.8.2.160729\lib\NET452\Sitecore.Analytics.MongoDB.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Analytics.Outcome, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -125,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\KKings.Foundation.Popsicle.config" />
+    <Content Include="Outcome.aspx" />
     <Content Include="EndSession.aspx" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
@@ -148,14 +157,21 @@
     <Compile Include="Events\OutcomeTrackingEvent.cs" />
     <Compile Include="Caching\EventSessionCache.cs" />
     <Compile Include="Caching\IEventCache.cs" />
+    <Compile Include="Outcome\OutcomeRepository.cs" />
     <Compile Include="Pipelines\EndAnalytics\EndEventTracking.cs" />
     <Compile Include="Pipelines\MABuildTrackingEvent\BuildTrackingEvent.cs" />
     <Compile Include="Pipelines\MABuildTrackingEvent\BuildTrackingEventArgs.cs" />
+    <Compile Include="Pipelines\MABuildTrackingOutcome\BuildTrackingOutcome.cs" />
+    <Compile Include="Pipelines\MABuildTrackingOutcome\BuildTrackingOutcomeArgs.cs" />
     <Compile Include="Pipelines\MAFilterPageEvents\FilterNonGoalEvents.cs" />
     <Compile Include="Pipelines\MAFilterPageEvents\FilterPageEventsArgs.cs" />
+    <Compile Include="Pipelines\MAFilterTrackingOutcomes\FilterPageOutcomesArgs.cs" />
+    <Compile Include="Pipelines\PostSessionEnd\InitializeEventTracker.cs" />
+    <Compile Include="Pipelines\PostSessionEnd\LogTrackedEvents.cs" />
     <Compile Include="Pipelines\RegisterPageEvent\RecordEvent.cs" />
     <Compile Include="Pipelines\SessionEnd\InitializeEventTracker.cs" />
     <Compile Include="Pipelines\SessionEnd\LogTrackedEvents.cs" />
+    <Compile Include="Pipelines\SessionEnd\TestSubmitSessionContext.cs" />
     <Compile Include="Pipelines\StartTracking\InitializeEventTracker.cs" />
     <Compile Include="Pipelines\VisitEnd\LogTrackedEvents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
