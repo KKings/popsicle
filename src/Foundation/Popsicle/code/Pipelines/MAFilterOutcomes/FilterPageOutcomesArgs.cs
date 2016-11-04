@@ -1,4 +1,4 @@
-﻿namespace KKings.Foundation.Popsicle.Pipelines.MAFilterTrackingOutcomes
+﻿namespace KKings.Foundation.Popsicle.Pipelines.MAFilterOutcomes
 {
     using Sitecore.Analytics.Outcome.Model;
     using Sitecore.Pipelines;

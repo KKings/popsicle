@@ -3,7 +3,7 @@
     using Analytics;
     using Microsoft.Extensions.DependencyInjection;
     using Pipelines.MABuildTrackingOutcome;
-    using Pipelines.MAFilterTrackingOutcomes;
+    using Pipelines.MAFilterOutcomes;
     using Sitecore.Analytics.Data.DataAccess.MongoDb;
     using Sitecore.Analytics.Outcome.Data;
     using Sitecore.Analytics.Outcome.Model;
@@ -39,7 +39,7 @@
 
             // Runs pipeline to filter out Outcomes that should not be sent
             var filterArgs = new FilterTrackingOutcomesArgs(outcome);
-            CorePipeline.Run("ma.filterPageOutcomes", filterArgs, false);
+            CorePipeline.Run("ma.filterOutcomes", filterArgs, false);
 
             if (filterArgs.IsFiltered)
             {

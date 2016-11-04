@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{539B2C0D-192D-482D-90D3-D977D2C2480B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7BE565C5-61B5-4893-8DA1-61A54CBB70A2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{7BE565C5-61B5-4893-8DA1-61A54CBB70A2}"
 	ProjectSection(SolutionItems) = preProject
 		gulp-config.js = gulp-config.js
 		gulpfile.js = gulpfile.js
