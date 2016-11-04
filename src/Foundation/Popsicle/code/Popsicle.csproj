@@ -132,7 +132,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\KKings.Foundation.Popsicle.config" />
+    <Content Include="App_Config\Include\Foundation\KKings.Foundation.Popsicle.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Outcome.aspx" />
     <Content Include="EndSession.aspx" />
     <None Include="packages.config" />
@@ -166,12 +168,12 @@
     <Compile Include="Pipelines\MAFilterPageEvents\FilterNonGoalEvents.cs" />
     <Compile Include="Pipelines\MAFilterPageEvents\FilterPageEventsArgs.cs" />
     <Compile Include="Pipelines\MAFilterTrackingOutcomes\FilterPageOutcomesArgs.cs" />
-    <Compile Include="Pipelines\PostSessionEnd\InitializeEventTracker.cs" />
+    <Compile Include="Pipelines\MAFlushTrackingEvents\FlushTrackingEventArgs.cs" />
+    <Compile Include="Pipelines\MAFlushTrackingEvents\EventsJobRunner.cs" />
+    <Compile Include="Pipelines\PostSessionEnd\FlushTrackingEvents.cs" />
     <Compile Include="Pipelines\PostSessionEnd\LogTrackedEvents.cs" />
     <Compile Include="Pipelines\RegisterPageEvent\RecordEvent.cs" />
     <Compile Include="Pipelines\SessionEnd\InitializeEventTracker.cs" />
-    <Compile Include="Pipelines\SessionEnd\LogTrackedEvents.cs" />
-    <Compile Include="Pipelines\SessionEnd\TestSubmitSessionContext.cs" />
     <Compile Include="Pipelines\StartTracking\InitializeEventTracker.cs" />
     <Compile Include="Pipelines\VisitEnd\LogTrackedEvents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

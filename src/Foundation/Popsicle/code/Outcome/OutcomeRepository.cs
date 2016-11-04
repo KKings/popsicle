@@ -10,6 +10,10 @@
     using Sitecore.DependencyInjection;
     using Sitecore.Pipelines;
 
+    /// <summary>
+    /// Overriding the Outcome Repository to intercept the save events 
+    /// of an Outcome before being flushed to MongoDb
+    /// </summary>
     public class OutcomeRepository : MongoDbOutcomeRepository
     {
         public OutcomeRepository(MongoDbCollection mongoCollection) : base(mongoCollection) { }
@@ -17,7 +21,12 @@
         public OutcomeRepository(string connectionStringName) : base(connectionStringName) { }
 
         public OutcomeRepository(string connectionStringName, string collectionName) : base(connectionStringName, collectionName) { }
-
+        
+        /// <summary>
+        /// Saves the Outcome to the Database
+        /// <para>Runs two pipelines to filter and create a Tracking Event</para>
+        /// </summary>
+        /// <param name="outcome">The outcome</param>
         public override void Save(IOutcome outcome)
         {
             var eventTracker = ServiceLocator.ServiceProvider.GetService<IEventTracker>();

@@ -5,6 +5,7 @@
     using MAFilterPageEvents;
     using Microsoft.Extensions.DependencyInjection;
     using Sitecore.Abstractions;
+    using Sitecore.Analytics;
     using Sitecore.Analytics.Pipelines.RegisterPageEvent;
     using Sitecore.DependencyInjection;
     using Sitecore.Pipelines;
@@ -37,7 +38,7 @@
 
             var pageEvent = args.PageEvent;
 
-            var buildArgs = new BuildTrackingEventArgs(pageEvent);
+            var buildArgs = new BuildTrackingEventArgs(pageEvent, Tracker.Current.Contact);
             CorePipeline.Run("ma.buildTrackingEvent", buildArgs);
 
             eventTracker.Track(buildArgs.TrackingEvent);
