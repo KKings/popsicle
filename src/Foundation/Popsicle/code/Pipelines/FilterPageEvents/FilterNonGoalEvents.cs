@@ -1,4 +1,4 @@
-﻿namespace KKings.Foundation.Popsicle.Pipelines.MAFilterPageEvents
+﻿namespace KKings.Foundation.Popsicle.Pipelines.FilterPageEvents
 {
     public class FilterNonGoalEvents
     {

@@ -1,8 +1,8 @@
 ﻿namespace KKings.Foundation.Popsicle.Pipelines.RegisterPageEvent
 {
     using Analytics;
-    using MABuildTrackingEvent;
-    using MAFilterPageEvents;
+    using BuildTrackingEvent;
+    using FilterPageEvents;
     using Microsoft.Extensions.DependencyInjection;
     using Sitecore.Abstractions;
     using Sitecore.Analytics;

@@ -2,8 +2,8 @@
 {
     using System.Linq;
     using Analytics;
-    using MAFlushTrackingEvents;
     using Microsoft.Extensions.DependencyInjection;
+    using Pipelines.FlushTrackingEvents;
     using Sitecore.DependencyInjection;
     using Sitecore.Pipelines;
     using Sitecore.Pipelines.EndSession;

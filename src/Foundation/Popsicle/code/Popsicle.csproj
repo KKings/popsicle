@@ -132,11 +132,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\Popsicle\KKings.Foundation.Popsicle.Tracking.config">
+    <Content Include="App_Config\Include\Foundation\KKings.Foundation.Popsicle.Tracking.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Outcome.aspx" />
     <Content Include="EndSession.aspx" />
+    <Content Include="App_Config\Include\Foundation\KKings.Foundation.Popsicle.Ingest.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Web.Debug.config">
@@ -161,22 +164,38 @@
     <Compile Include="Caching\IEventCache.cs" />
     <Compile Include="Outcome\OutcomeRepository.cs" />
     <Compile Include="Pipelines\EndAnalytics\EndEventTracking.cs" />
-    <Compile Include="Pipelines\MABuildTrackingEvent\BuildTrackingEvent.cs" />
-    <Compile Include="Pipelines\MABuildTrackingEvent\BuildTrackingEventArgs.cs" />
-    <Compile Include="Pipelines\MABuildTrackingOutcome\BuildTrackingOutcome.cs" />
-    <Compile Include="Pipelines\MABuildTrackingOutcome\BuildTrackingOutcomeArgs.cs" />
-    <Compile Include="Pipelines\MAFilterPageEvents\FilterNonGoalEvents.cs" />
-    <Compile Include="Pipelines\MAFilterPageEvents\FilterPageEventsArgs.cs" />
-    <Compile Include="Pipelines\MAFilterOutcomes\FilterPageOutcomesArgs.cs" />
-    <Compile Include="Pipelines\MAFlushTrackingEvents\FlushTrackingEventArgs.cs" />
-    <Compile Include="Pipelines\MAFlushTrackingEvents\EventsJobRunner.cs" />
+    <Compile Include="Pipelines\BuildTrackingOutcome\BuildTrackingEvent\BuildTrackingEvent.cs" />
+    <Compile Include="Pipelines\BuildTrackingOutcome\BuildTrackingEvent\BuildTrackingEventArgs.cs" />
+    <Compile Include="Pipelines\BuildTrackingOutcome\BuildTrackingOutcome.cs" />
+    <Compile Include="Pipelines\BuildTrackingOutcome\BuildTrackingOutcomeArgs.cs" />
+    <Compile Include="Pipelines\FilterPageEvents\FilterNonGoalEvents.cs" />
+    <Compile Include="Pipelines\FilterPageEvents\FilterPageEventsArgs.cs" />
+    <Compile Include="Pipelines\FilterOutcomes\FilterPageOutcomesArgs.cs" />
+    <Compile Include="Pipelines\FlushTrackingEvents\FlushTrackingEventArgs.cs" />
+    <Compile Include="Pipelines\FlushTrackingEvents\EventsJobRunner.cs" />
+    <Compile Include="Pipelines\Ingest\IngestionPipelineArgs.cs" />
+    <Compile Include="Pipelines\Ingest\RunHydrators.cs" />
     <Compile Include="Pipelines\PostSessionEnd\FlushTrackingEvents.cs" />
     <Compile Include="Pipelines\PostSessionEnd\LogTrackedEvents.cs" />
     <Compile Include="Pipelines\RegisterPageEvent\RecordEvent.cs" />
     <Compile Include="Pipelines\SessionEnd\InitializeEventTracker.cs" />
+    <Compile Include="Pipelines\StartAnalytics\StartIngestion.cs" />
     <Compile Include="Pipelines\StartTracking\InitializeEventTracker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterDependencies.cs" />
+    <Compile Include="xDb\Ingest\DataReader\DefaultDataReader.cs" />
+    <Compile Include="xDb\Ingest\DataReader\IDataReader.cs" />
+    <Compile Include="xDb\Ingest\DataReader\JsonDataReader.cs" />
+    <Compile Include="xDb\Ingest\DataReader\OAuthJsonDataReader.cs" />
+    <Compile Include="xDb\Ingest\DataReader\OAuth\IOAuthGenerator.cs" />
+    <Compile Include="xDb\Ingest\DataReader\OAuth\OAuthGenerator.cs" />
+    <Compile Include="xDb\Ingest\DataReader\OAuth\SignatureTypes.cs" />
+    <Compile Include="xDb\Ingest\Hydrators\IHydrator.cs" />
+    <Compile Include="xDb\Ingest\Hydrators\ObjectHydratorFromJson.cs" />
+    <Compile Include="xDb\Ingest\IIngestionManager.cs" />
+    <Compile Include="xDb\Ingest\IngestionManager.cs" />
+    <Compile Include="xDb\Ingest\Resolvers\HydratorResolver.cs" />
+    <Compile Include="xDb\Ingest\Resolvers\IHydratorResolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Forms\" />

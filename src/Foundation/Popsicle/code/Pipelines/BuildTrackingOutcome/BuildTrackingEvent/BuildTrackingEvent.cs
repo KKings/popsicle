@@ -1,4 +1,4 @@
-﻿namespace KKings.Foundation.Popsicle.Pipelines.MABuildTrackingEvent
+﻿namespace KKings.Foundation.Popsicle.Pipelines.BuildTrackingEvent
 {
     using System;
     using Events;

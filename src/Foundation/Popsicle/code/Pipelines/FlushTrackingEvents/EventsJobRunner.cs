@@ -1,4 +1,4 @@
-﻿namespace KKings.Foundation.Popsicle.Pipelines.MAFlushTrackingEvents
+﻿namespace KKings.Foundation.Popsicle.Pipelines.FlushTrackingEvents
 {
     using System.Linq;
 

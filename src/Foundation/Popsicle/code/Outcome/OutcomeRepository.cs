@@ -2,8 +2,8 @@
 {
     using Analytics;
     using Microsoft.Extensions.DependencyInjection;
-    using Pipelines.MABuildTrackingOutcome;
-    using Pipelines.MAFilterOutcomes;
+    using Pipelines.BuildTrackingOutcome;
+    using Pipelines.FilterOutcomes;
     using Sitecore.Analytics.Data.DataAccess.MongoDb;
     using Sitecore.Analytics.Outcome.Data;
     using Sitecore.Analytics.Outcome.Model;

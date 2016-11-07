@@ -1,4 +1,4 @@
-﻿namespace KKings.Foundation.Popsicle.Pipelines.MAFilterPageEvents
+﻿namespace KKings.Foundation.Popsicle.Pipelines.FilterPageEvents
 {
     using Sitecore.Analytics.Model;
     using Sitecore.Pipelines;
