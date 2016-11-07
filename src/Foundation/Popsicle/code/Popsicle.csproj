@@ -194,7 +194,7 @@
     <Compile Include="xDb\Ingest\Hydrators\ObjectHydratorFromJson.cs" />
     <Compile Include="xDb\Ingest\IIngestionManager.cs" />
     <Compile Include="xDb\Ingest\IngestionManager.cs" />
-    <Compile Include="xDb\Ingest\Resolvers\HydratorResolver.cs" />
+    <Compile Include="xDb\Ingest\Resolvers\DefaultHydratorResolver.cs" />
     <Compile Include="xDb\Ingest\Resolvers\IHydratorResolver.cs" />
   </ItemGroup>
   <ItemGroup>

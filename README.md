@@ -60,7 +60,7 @@ Default Ingestion Configuration
   <sitecore>
     <ingestion>
       <dataReader type="KKings.Foundation.Popsicle.xDb.Ingest.DataReader.DefaultDataReader, KKings.Foundation.Popsicle" />
-      <hydratorResolver type="KKings.Foundation.Popsicle.xDb.Ingest.Resolvers.HydratorResolver, KKings.Foundation.Popsicle">
+      <hydratorResolver type="KKings.Foundation.Popsicle.xDb.Ingest.Resolvers.DefaultHydratorResolver, KKings.Foundation.Popsicle">
         <FacetName>Personal</FacetName>
         <FacetTypeName>Sitecore.Analytics.Model.Entities.IContactPersonalInfo, Sitecore.Analytics.Model</FacetTypeName>
         <HydratorTypeName>KKings.Foundation.Popsicle.xDb.Ingest.Hydrators.ObjectHydratorFromJson, KKings.Foundation.Popsicle</HydratorTypeName>
@@ -68,9 +68,13 @@ Default Ingestion Configuration
       
       <ingestionManager type="KKings.Foundation.Popsicle.xDb.Ingest.IngestionManager,KKings.Foundation.Popsicle">
         <param name="reader" ref="ingestion/dataReader" />
-        <param name="resolver" ref="ingestion/hydratorResolver" singleInstance="true" />
+        <resolvers name="resolvers" hint="list">
+          <resolver ref="ingestion/hydratorResolver" singleInstance="true"/>
+        </resolvers>
       </ingestionManager>
     </ingestion>
   </sitecore>
 </configuration>
 ```
+
+Multiple Resolvers can be used to hydrate different Facets on the Contact Record. Add Resolvers or references to the ingestion/ingestionManager/resolvers node.

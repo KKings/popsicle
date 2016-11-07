@@ -30,7 +30,6 @@
         public void Hydrate(Stream source)
         {
             var data = new StreamReader(source, Encoding.UTF8).ReadToEnd();
-            source.Close();
 
             if (String.IsNullOrEmpty(data))
             {
