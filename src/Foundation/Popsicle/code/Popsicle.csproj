@@ -140,6 +140,9 @@
     <Content Include="App_Config\Include\Foundation\KKings.Foundation.Popsicle.Ingest.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\Foundation\KKings.Foundation.Popsicle.Forms.config" />
+    <Content Include="sitecore\shell\Controls\Rich Text Editor\Popsicle\InsertFormToken.js" />
+    <Content Include="sitecore\shell\Controls\Rich Text Editor\Popsicle\InsertFormTokenDialog.js" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Web.Debug.config">
@@ -162,12 +165,19 @@
     <Compile Include="Events\OutcomeTrackingEvent.cs" />
     <Compile Include="Caching\EventSessionCache.cs" />
     <Compile Include="Caching\IEventCache.cs" />
+    <Compile Include="Forms\DefaultMarkupGenerator.cs" />
+    <Compile Include="Forms\IMarkupGenerator.cs" />
+    <Compile Include="Forms\Items\MarketingFormItem.cs" />
     <Compile Include="Outcome\OutcomeRepository.cs" />
     <Compile Include="Pipelines\EndAnalytics\EndEventTracking.cs" />
     <Compile Include="Pipelines\BuildTrackingOutcome\BuildTrackingEvent\BuildTrackingEvent.cs" />
     <Compile Include="Pipelines\BuildTrackingOutcome\BuildTrackingEvent\BuildTrackingEventArgs.cs" />
     <Compile Include="Pipelines\BuildTrackingOutcome\BuildTrackingOutcome.cs" />
     <Compile Include="Pipelines\BuildTrackingOutcome\BuildTrackingOutcomeArgs.cs" />
+    <Compile Include="Pipelines\ExpandShortCode\ExpandShortCodeArgs.cs" />
+    <Compile Include="Pipelines\ExpandShortCode\ExpandShortCodeProcessor.cs" />
+    <Compile Include="Pipelines\ExpandShortCode\MarketingFormExpander.cs" />
+    <Compile Include="Pipelines\ExpandShortCode\ShortCode.cs" />
     <Compile Include="Pipelines\FilterPageEvents\FilterNonGoalEvents.cs" />
     <Compile Include="Pipelines\FilterPageEvents\FilterPageEventsArgs.cs" />
     <Compile Include="Pipelines\FilterOutcomes\FilterPageOutcomesArgs.cs" />
@@ -198,7 +208,6 @@
     <Compile Include="xDb\Ingest\Resolvers\IHydratorResolver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Forms\" />
     <Folder Include="Jobs\" />
     <Folder Include="Marketing\" />
     <Folder Include="Services\" />
