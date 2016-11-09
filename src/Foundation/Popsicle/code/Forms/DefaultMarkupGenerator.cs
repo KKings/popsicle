@@ -6,14 +6,14 @@
 
     public class DefaultMarkupGenerator : IMarkupGenerator
     {
-        public IHtmlString Generate(MarketingFormItem item)
+        public string Generate(MarketingFormItem item)
         {
             var span = new TagBuilder("span")
             {
                 InnerHtml = $"Markup automatically generated {item.FormId}. Please create a class and implement {typeof(IMarkupGenerator)} to generate specific markup."
             };
 
-            return new HtmlString(span.ToString(TagRenderMode.Normal));
+            return span.ToString(TagRenderMode.Normal);
         }
     }
 }

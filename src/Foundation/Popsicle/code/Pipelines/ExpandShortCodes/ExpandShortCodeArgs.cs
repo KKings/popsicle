@@ -1,4 +1,4 @@
-﻿namespace KKings.Foundation.Popsicle.Pipelines.ExpandShortCode
+﻿namespace KKings.Foundation.Popsicle.Pipelines.ExpandShortCodes
 {
     using Sitecore.Pipelines;
 

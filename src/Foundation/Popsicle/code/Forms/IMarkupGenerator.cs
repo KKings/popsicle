@@ -5,6 +5,6 @@
 
     public interface IMarkupGenerator
     {
-        IHtmlString Generate(MarketingFormItem item);
+        string Generate(MarketingFormItem item);
     }
 }

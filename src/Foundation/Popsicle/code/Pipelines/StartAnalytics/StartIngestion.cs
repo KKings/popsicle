@@ -11,7 +11,7 @@
     {
         public virtual void Process(PipelineArgs args)
         {
-            if (!Sitecore.Analytics.Tracker.Current.Session.Settings.IsFirstRequest)
+            if (!Sitecore.Analytics.Tracker.Current.Session.Settings.IsFirstRequest || !Sitecore.Context.PageMode.IsNormal)
             {
                 return;
             }

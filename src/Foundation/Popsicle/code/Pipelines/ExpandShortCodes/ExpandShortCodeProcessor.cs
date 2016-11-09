@@ -1,9 +1,9 @@
-﻿namespace KKings.Foundation.Popsicle.Pipelines.ExpandShortCode
+﻿namespace KKings.Foundation.Popsicle.Pipelines.ExpandShortCodes
 {
     using System;
     using System.Collections.Generic;
-    using Sitecore.Diagnostics;
     using System.Linq;
+    using Sitecore.Diagnostics;
 
     /// <summary>
     /// Processor to expand all ShortCodes
@@ -52,5 +52,6 @@
         /// </summary>
         /// <param name="content">Content with potential ShortCodes</param>
         /// <returns>An array of ShortCodes</returns>
-        protected abstract IList<ShortCode> GetShortCodes(string content);
+        public abstract IList<ShortCode> GetShortCodes(string content);
     }
+}

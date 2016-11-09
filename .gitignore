@@ -105,3 +105,4 @@ _res/
 tools/nodejs/
 Code Generation Templates/*.tt
 *.nupkg
+/src/Foundation/Popsicle/tests/Popsicle.Tests/license.xml
