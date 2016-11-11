@@ -24,6 +24,8 @@ Sitecore xDb with a Marketing Automation Platform
 - xProfile Sync
 
 ## Implemented
+
+### Tracking
 Goals and Outcomes triggered for a Contact within xDb can be sent as an Entity or an Object to the Marketing Automation platform. Several 
 pipelines and hooks are available to hook into:
 
@@ -33,7 +35,7 @@ pipelines and hooks are available to hook into:
 - Filter Outcomes (ma.filterOutcomes) - Filters outcomes before building a Tracking Event
 - Flush Tracking Events (ma.flushTrackingEvents) - Sends events to Job Manager, Queue, Platform, etc
 
-## In-Progress
+### Ingestion
 
 xProfile Sync with Marketing Automation on session start.
 
@@ -50,7 +52,7 @@ Additional Hooks and Extension Points:
 - IHydratorResolver - Responsible for resolving the hydrator with the Object that needs to be hydrated
 - IIngestionManager - Responsible for resolving combining the IDataReader and IHydrator to ingest
 
-### Configuration 
+#### Configuration 
 
 Default Ingestion Configuration
 
@@ -78,3 +80,28 @@ Default Ingestion Configuration
 ```
 
 Multiple Resolvers can be used to hydrate different Facets on the Contact Record. Add Resolvers or references to the ingestion/ingestionManager/resolvers node.
+
+### Forms
+
+The following features have been implemented:
+
+- Token Expander for Injecting markup, the Marketing Form, within Rich-Text Fields 
+- Centralized Markup Generator for generating Forms
+
+Override the Default MarkupGenerator by adding a class that imlements the IMarkupGenerator interface. Then patch in the replacement:
+
+```xml
+<?xml version="1.0"?>
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <forms>
+      <generator type="[Namespace, Class]" singleInstance="true" />
+    </forms>
+  </sitecore>
+</configuration>
+```
+
+## In-Progress
+
+Continuation of forms implementation
+
