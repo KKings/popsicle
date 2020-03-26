@@ -1,4 +1,4 @@
-# popsicle
+# Sitecore Marketing Automation Framework
 Sitecore Marketing Automation Framework for quickly integrating/syncing 
 Sitecore xDb with a Marketing Automation Platform
 
